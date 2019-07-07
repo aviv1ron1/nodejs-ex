@@ -115,6 +115,10 @@ app.use(function(err, req, res, next){
   res.status(500).send('Something bad happened!');
 });
 
+app.get("helo", (req, res) => {
+  res.status(200).send("helo!");  
+})
+
 initDb(function(err){
   console.log('Error connecting to Mongo. Message:\n'+err);
 });
